@@ -1,7 +1,7 @@
 Cypress.Commands.add("logar", () => {
     cy.visit("https://front-cras.app.fslab.dev")
-    cy.get('#email').type('dev@gmail.com')
-    cy.get('#senha').type('123')
+    cy.get('#email').type(Cypress.env('email'))
+    cy.get('#senha').type(Cypress.env('senha'))
     cy.get(`.styles_button__dr0t2`).click();
   });
 

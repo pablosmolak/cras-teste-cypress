@@ -15,7 +15,7 @@ describe('Login', () => {
     cy.get('#email').type('devv@gmail.com')
     cy.get('#senha').type('123')
     cy.get(`.styles_button__dr0t2`).click();
-    cy.contains("Usuário ou Senha inválida0!")
+    cy.contains("Usuário ou Senha inválida!")
 
   })
 
