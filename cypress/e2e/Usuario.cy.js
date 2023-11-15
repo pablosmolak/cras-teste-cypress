@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-import faker from "faker-br";
+import faker from "faker-br"
 
 const nome = faker.name.firstName()
 const sobrenome = faker.name.lastName()
@@ -9,8 +9,8 @@ const email = faker.internet.email()
 describe('Login', () => {
     
   beforeEach(() => {
-    cy.logar();
-    cy.usuarios();
+    cy.logar(Cypress.env('email'),Cypress.env('senha'))
+    cy.usuarios()
   })
 
   it("Deve realizar realizar cadastro de um usuário com status ativo - cenário de sucesso", () => {   
